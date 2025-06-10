@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Product App</string>
+    <string name="home">ទំព័រដើម</string>
+    <string name="search">ស្វែងរក</string>
+    <string name="cart">កន្ត្រក</string>
+    <string name="account">គណនី</string>
+    <string name="product">ផលិតផល</string>
+</resources>

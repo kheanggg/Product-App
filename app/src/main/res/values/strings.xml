@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Product App</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="cart">Cart</string>
+    <string name="account">Account</string>
+    <string name="product">Product</string>
+</resources>
