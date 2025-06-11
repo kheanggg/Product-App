@@ -6,4 +6,12 @@
     <string name="cart">កន្ត្រក</string>
     <string name="account">គណនី</string>
     <string name="product">ផលិតផល</string>
+    <string name="add_to_cart">ដាក់ចូលកន្ត្រក</string>
+    <string name="product_name">Product Name</string>
+    <string name="product_price">Price</string>
+    <string name="specification">Specification</string>
+    <string name="product_os">OS</string>
+    <string name="product_cpu">CPU</string>
+    <string name="product_memory">XGB</string>
+    <string name="product_screen_size">Size</string>
 </resources>
