@@ -20,10 +20,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        app:itemRippleColor="@android:color/transparent"
+        app:itemTextColor="@color/nav_item_color"
+        app:itemIconTint="@color/nav_item_color"
         app:menu="@menu/activity_main_bottom_navigation_view"
         app:labelVisibilityMode="auto"
-        app:itemActiveIndicatorStyle="@style/RedCircleActiveIndicatorStyle"
         app:itemIconSize="28dp" />
 
 
