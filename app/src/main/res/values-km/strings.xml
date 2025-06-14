@@ -7,11 +7,13 @@
     <string name="account">គណនី</string>
     <string name="product">ផលិតផល</string>
     <string name="add_to_cart">ដាក់ចូលកន្ត្រក</string>
-    <string name="product_name">Product Name</string>
-    <string name="product_price">Price</string>
+    <string name="added_to_cart">ក្នុងកន្ត្រក</string>
+    <string name="product_name">ឈ្មោះទំនិញ</string>
+    <string name="product_price">តម្លៃ</string>
     <string name="specification">Specification</string>
     <string name="product_os">OS</string>
     <string name="product_cpu">CPU</string>
     <string name="product_memory">XGB</string>
     <string name="product_screen_size">Size</string>
+    <string name="my_cart">កន្ត្រករបស់ខ្ញុំ</string>
 </resources>

@@ -4,25 +4,24 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import com.example.productapp.databinding.ViewholderProductBinding
+import com.example.productapp.databinding.ViewholderSearchProductBinding
 import com.example.productapp.model.Product
-import com.example.productapp.viewholder.ProductViewHolder
+import com.example.productapp.viewholder.SearchProductViewHolder
 
 
-class ProductAdapter: ListAdapter<Product, ProductViewHolder>(ProductItemDiffCallback()) {
+class ProductAdapter: ListAdapter<Product, SearchProductViewHolder>(ProductItemDiffCallback()) {
 
     var onItemClickListener: ((position: Int) -> Unit)? = null
 
     lateinit var allDataSet: List<Product>
 
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchProductViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val binding = ViewholderProductBinding.inflate(layoutInflater, parent, false)
-        return ProductViewHolder(binding)
+        val binding = ViewholderSearchProductBinding.inflate(layoutInflater, parent, false)
+        return SearchProductViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: SearchProductViewHolder, position: Int) {
         holder.bind(getItem(position))
 
         holder.itemView.setOnClickListener {
