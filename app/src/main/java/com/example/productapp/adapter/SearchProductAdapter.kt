@@ -9,7 +9,7 @@ import com.example.productapp.model.Product
 import com.example.productapp.viewholder.SearchProductViewHolder
 
 
-class ProductAdapter: ListAdapter<Product, SearchProductViewHolder>(ProductItemDiffCallback()) {
+class SearchProductAdapter: ListAdapter<Product, SearchProductViewHolder>(ProductItemDiffCallback()) {
 
     var onItemClickListener: ((position: Int) -> Unit)? = null
 

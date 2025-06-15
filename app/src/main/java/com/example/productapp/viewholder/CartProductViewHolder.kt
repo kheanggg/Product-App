@@ -6,7 +6,12 @@ import com.example.productapp.model.Product
 
 class CartProductViewHolder(private val binding: ViewholderCartProductBinding): ViewHolder((binding.root)) {
 
-    fun bind(product: Product) {
-        binding.txtName.text = product.name
+    fun bind(product: Product, onRemove: (() -> Unit)? = null) {
+        binding.txtProductName.text = product.name
+        binding.txtProductPrice.text = '$' + product.price.toString()
+
+        binding.btnRemove.setOnClickListener {
+            onRemove?.invoke()
+        }
     }
 }

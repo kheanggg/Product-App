@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.productapp.ProductDetailActivity
-import com.example.productapp.adapter.ProductAdapter
+import com.example.productapp.adapter.SearchProductAdapter
 import com.example.productapp.databinding.FragmentSearchBinding
 import com.example.productapp.model.Product
 import com.example.productapp.service.ApiService
@@ -24,7 +24,7 @@ class SearchFragment: Fragment() {
 
     private lateinit var binding: FragmentSearchBinding
 
-    private var adapter: ProductAdapter? = null
+    private var adapter: SearchProductAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -63,7 +63,7 @@ class SearchFragment: Fragment() {
 
     private fun displayProductList(productList: List<Product>) {
 
-        adapter = ProductAdapter()
+        adapter = SearchProductAdapter()
         adapter?.allDataSet = productList
         adapter?.submitList(productList)
         adapter?.onItemClickListener = { position ->

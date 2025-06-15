@@ -13,8 +13,18 @@
         android:textStyle="bold"
         android:textColor="@color/black"/>
 
+    <TextView
+        android:id="@+id/textViewEmptyCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your cart is empty."
+        android:gravity="center"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:padding="16dp"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recyclerView" />
+        android:id="@+id/recyclerViewCart" />
 </LinearLayout>

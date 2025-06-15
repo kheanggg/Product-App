@@ -8,8 +8,30 @@
 
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/txtName"
-        android:text="@string/product" />
+        android:id="@+id/txtProductName"
+        android:text="@string/product_name" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtProductPrice"
+        android:text="@string/product_price" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:id="@+id/btnRemove"
+        android:src="@drawable/ic_trash"
+        android:focusable="true"
+        android:background="@android:color/transparent"
+        android:padding="10dp"
+        android:clickable="true"/>
 </LinearLayout>

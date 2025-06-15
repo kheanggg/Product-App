@@ -14,7 +14,7 @@ object CartManager {
         cartItems.remove(product)
     }
 
-    fun getCartItems(): List<Product> = cartItems
+    fun getCartItems(): List<Product> = cartItems.toList()
 
     fun clearCart() {
         cartItems.clear()
