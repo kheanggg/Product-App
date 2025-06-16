@@ -66,6 +66,15 @@ class SearchFragment: Fragment() {
         adapter = SearchProductAdapter()
         adapter?.allDataSet = productList
         adapter?.submitList(productList)
+
+        adapter?.onEmptyResult = { isEmpty ->
+            if (isEmpty) {
+                binding.txtNoResults.visibility = View.VISIBLE
+            } else {
+                binding.txtNoResults.visibility = View.GONE
+            }
+        }
+
         adapter?.onItemClickListener = { position ->
             val product = productList[position]
             val intent = Intent(requireContext(), ProductDetailActivity::class.java)

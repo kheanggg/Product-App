@@ -13,6 +13,8 @@ class SearchProductAdapter: ListAdapter<Product, SearchProductViewHolder>(Produc
 
     var onItemClickListener: ((position: Int) -> Unit)? = null
 
+    var onEmptyResult: ((Boolean) -> Unit)? = null
+
     lateinit var allDataSet: List<Product>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchProductViewHolder {
@@ -31,6 +33,7 @@ class SearchProductAdapter: ListAdapter<Product, SearchProductViewHolder>(Produc
 
     fun filterByName(keyword: String) {
         val newList = allDataSet.filter { product -> product.name.contains(keyword, true)  }
+        onEmptyResult?.invoke(newList.isEmpty())
         submitList(newList)
     }
 
