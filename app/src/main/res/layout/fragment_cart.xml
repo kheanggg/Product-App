@@ -13,15 +13,22 @@
         android:textStyle="bold"
         android:textColor="@color/black"/>
 
-    <TextView
+    <RelativeLayout
         android:id="@+id/textViewEmptyCart"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Your cart is empty."
-        android:gravity="center"
-        android:textSize="18sp"
-        android:visibility="gone"
-        android:padding="16dp"/>
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your cart is empty."
+            android:gravity="center"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
