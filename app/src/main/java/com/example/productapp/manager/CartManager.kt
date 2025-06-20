@@ -2,6 +2,7 @@ package com.example.productapp.manager
 
 import com.example.productapp.model.Product
 
+// Singleton
 object CartManager {
 
     private val cartItems = mutableListOf<Product>()
