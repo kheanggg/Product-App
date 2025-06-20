@@ -1,8 +1,8 @@
 package com.example.productapp
 
-import android.accounts.Account
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.productapp.databinding.ActivityMainBinding
 import com.example.productapp.fragment.AccountFragment
 import com.example.productapp.fragment.CartFragment
@@ -61,5 +61,14 @@ class MainActivity : AppCompatActivity() {
     private fun showAccountFragment() {
         supportFragmentManager.beginTransaction().replace(binding.lytFragment.id, accountFragment).commit()
     }
-    
+
+    fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.lytFragment, fragment)
+            .commit()
+    }
+
+    fun selectBottomNavItem(itemId: Int) {
+        binding.navigationView.selectedItemId = itemId
+    }
 }

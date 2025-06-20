@@ -54,4 +54,6 @@ dependencies {
     implementation(libs.converter.gson)
     implementation(libs.picasso)
     implementation (libs.material.v1110)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
 }

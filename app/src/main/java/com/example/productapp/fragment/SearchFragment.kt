@@ -11,7 +11,9 @@ import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.productapp.MainActivity
 import com.example.productapp.ProductDetailActivity
+import com.example.productapp.R
 import com.example.productapp.adapter.SearchProductAdapter
 import com.example.productapp.databinding.FragmentSearchBinding
 import com.example.productapp.model.Product
@@ -38,8 +40,11 @@ class SearchFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        loadProductList()
+        binding.icBack.setOnClickListener {
+            goToHomeFragment()
+        }
 
+        loadProductList()
         initSearchView()
     }
 
@@ -101,6 +106,17 @@ class SearchFragment: Fragment() {
         binding.edtSearch.doAfterTextChanged { edt ->
             adapter?.filterByName(edt.toString())
         }
+    }
+
+    private fun goToHomeFragment() {
+        val mainActivity = activity as? MainActivity
+        mainActivity?.replaceFragment(HomeFragment())
+        mainActivity?.selectBottomNavItem(R.id.mnuHome)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.edtSearch.setText("") // Clear when the user returns
     }
 
 }

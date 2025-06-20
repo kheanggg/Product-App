@@ -30,8 +30,29 @@
 
     </RelativeLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
+
+    <RelativeLayout
+        android:id="@+id/sectionContent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/recyclerViewCart" />
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerViewCart" />
+
+        <Button
+            android:id="@+id/btnCheckout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_to_cart_background"
+            android:text="Checkout"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"/>
+
+    </RelativeLayout>
 </LinearLayout>

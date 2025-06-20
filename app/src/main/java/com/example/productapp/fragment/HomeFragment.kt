@@ -64,10 +64,14 @@ class HomeFragment : Fragment() {
         lifecycleScope.launch {
             try {
                 val productList = apiService.loadProductList()
-                displayProductList(productList)
+                if (isAdded) { // Fragment is still attached
+                    displayProductList(productList)
+                }
             } catch (ex: Exception) {
                 Log.e("productapp", "Load product list error: ${ex.message}")
-                showAlertDialog("Error", "Error while loading data from Server.")
+                if (isAdded) {
+                    showAlertDialog("Error", "Error while loading data from Server.")
+                }
             }
         }
     }
